@@ -1,0 +1,59 @@
+.Card {
+  width: 50%;
+  height: 75%;
+  min-height: max-content;
+  background-color: rgb(237 233 254);
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: calc(2.5rem * (1 - 0));
+  margin-bottom: calc(2.5rem * 0);
+
+  .todoContainer {
+    width: 100%;
+    height: 75%;
+    min-height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: calc(2.5rem * (1 - 0));
+    margin-bottom: calc(2.5rem * 0);
+
+    .title {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    }
+
+    .formContainer {
+      width: 75%;
+    }
+
+    .todoListContainer {
+      width: 75%;
+
+      .todoList {
+        width: 100%;
+        max-height: 18rem;
+        overflow-y: scroll;
+
+        .todo {
+          margin-bottom: 0.75rem;
+        }
+      }
+    }
+  }
+  .clearButton {
+    margin-bottom: 0.75rem;
+    background-color: rgb(139 92 246);
+    background-color: rgb(109 40 217);
+    color: rgb(255 255 255);
+    font-weight: 700;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    border-radius: 0.25rem;
+  }
+}

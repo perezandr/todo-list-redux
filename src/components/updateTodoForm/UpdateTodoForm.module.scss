@@ -1,0 +1,35 @@
+.AddTodoForm {
+  display: flex;
+  margin-right: calc(0.75rem);
+  margin-left: calc(0.75rem * -1);
+
+  .input {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    appearance: none;
+    border-width: 1px;
+    border-radius: 0.25rem;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    color: rgb(55 65 81);
+    line-height: 1.25;
+    background-color: rgb(228 228 231);
+  }
+
+  .button {
+    background-color: rgb(249, 22, 200);
+    color: rgb(255 255 255);
+    font-weight: 700;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    border-radius: 0.25rem;
+
+    &:hover {
+      background-color: rgb(194 65 12);
+    }
+  }
+}
