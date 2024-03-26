@@ -14,23 +14,17 @@ const SingleTodoCard = (props) => {
 
   return (
     <div className={styles.todoCard}>
-      <div className="px-4">
-        <h1
-        // className={
-        // done ?
-        // "font-semibold line-through" :
-        // "font-semibold"
-        // }
-        >
+      <div className={styles.titleContainer}>
+        <button
+          onClick={() => setDone(!done)}
+          className={styles.checkButton}
+          size={20}
+        />
+        <h1 className={done ? styles.titleDone : styles.titleNotDone}>
           {props.name}
         </h1>
       </div>
       <div className={styles.iconContainer}>
-        <BsCheckSquare
-          onClick={() => setDone(!done)}
-          className={styles.checkIcon}
-          size={20}
-        />
         <FaEdit
           onClick={() =>
             dispatch(

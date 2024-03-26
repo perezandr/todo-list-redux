@@ -1,19 +1,45 @@
 .todoCard {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  background-color: rgb(196 181 253);
+  align-items: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  border-radius: 0.25rem;
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  border-bottom: 2px solid #ffffff;
 
   .titleContainer {
-    padding-left: 1rem;
+    max-width: 75%;
+    padding-left: 0.1rem;
     padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    box-sizing: border-box;
 
-    .title {
-      font-weight: 600;
+    .checkButton {
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      width: 20px;
+      height: 20px;
+      color: #ffffff;
+      flex-shrink: 0;
+      border-radius: 20px;
+    }
+    .checkButton:checked {
+    }
+
+    .titleDone {
+      font-size: 20px;
       text-decoration-line: line-through;
+      word-break: break-all;
+      color: #fca311;
+    }
+
+    .titleNotDone {
+      font-size: 20px;
+      word-break: break-all;
     }
   }
 
@@ -21,22 +47,16 @@
     padding-left: 1rem;
     padding-right: 1rem;
     display: flex;
-    margin-right: calc(1rem * 0);
-    margin-left: calc(1rem * (1 - 0));
-
-    .checkIcon {
-      cursor: pointer;
-      color: #2b6cb0;
-    }
+    gap: 5px;
 
     .editIcon {
       cursor: pointer;
-      color: #d97706;
+      color: #ffffff;
     }
 
     .trashIcon {
       cursor: pointer;
-      color: #c53030;
+      color: #fca311;
     }
   }
 }

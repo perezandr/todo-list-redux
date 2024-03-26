@@ -17,22 +17,21 @@ const Card = () => {
         <div className={styles.formContainer}>
           {toggleForm ? <AddTodoForm /> : <UpdateTodoForm />}
         </div>
-        <div className={styles.todoListContainer}>
-          <ul className={styles.todoList}>
-            {myTodos.map((todo) => (
-              <li className={styles.todo} key={todo.id}>
-                <SingleTodoCard id={todo.id} name={todo.name} />
-              </li>
-            ))}
-          </ul>
-        </div>
+
+        <ul className={styles.todoList}>
+          {myTodos.map((todo) => (
+            <li className={styles.todo} key={todo.id}>
+              <SingleTodoCard id={todo.id} name={todo.name} />
+            </li>
+          ))}
+        </ul>
+        <button
+          onClick={() => dispatch(todosCleared())}
+          className={styles.clearButton}
+        >
+          Clear list
+        </button>
       </div>
-      <button
-        onClick={() => dispatch(todosCleared())}
-        className={styles.clearButton}
-      >
-        Clear
-      </button>
     </div>
   );
 };

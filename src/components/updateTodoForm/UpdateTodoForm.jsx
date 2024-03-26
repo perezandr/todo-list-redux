@@ -26,7 +26,7 @@ const UpdateTodoForm = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className={styles.AddTodoForm}>
+      <form onSubmit={handleSubmit} className={styles.UpdateTodoForm}>
         <input
           value={update}
           onChange={(e) => setUpdate(e.target.value)}

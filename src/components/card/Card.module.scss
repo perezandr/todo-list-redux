@@ -1,25 +1,26 @@
 .Card {
-  width: 50%;
+  width: 500px;
   height: 75%;
-  min-height: max-content;
-  background-color: rgb(237 233 254);
-  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  border-radius: 0.5rem;
+  min-height: 320px;
+  border: 1px solid rgba(255, 255, 255, 0.59);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 3rem;
+  background: rgba(255, 255, 255, 0.16);
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  margin-top: calc(2.5rem * (1 - 0));
-  margin-bottom: calc(2.5rem * 0);
+  color: #ffffff;
 
   .todoContainer {
     width: 100%;
-    height: 75%;
+    height: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
     min-height: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: calc(2.5rem * (1 - 0));
-    margin-bottom: calc(2.5rem * 0);
 
     .title {
       font-size: 1.875rem;
@@ -27,33 +28,66 @@
     }
 
     .formContainer {
-      width: 75%;
+      width: 100%;
+      padding: 10px;
     }
 
-    .todoListContainer {
-      width: 75%;
+    .todoList {
+      width: 100%;
+      height: 80%;
+      list-style: none;
+      padding: 10px;
+      overflow-y: scroll;
+      border-radius: 2rem;
 
-      .todoList {
-        width: 100%;
-        max-height: 18rem;
-        overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: 2px;
+      }
 
-        .todo {
-          margin-bottom: 0.75rem;
-        }
+      &::-webkit-scrollbar-track {
+        background: #ffffff;
+        border-radius: 20px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        border: 3px solid #fca311;
+      }
+
+      .todo {
+        margin-bottom: 0.75rem;
+        box-sizing: content-box;
       }
     }
   }
   .clearButton {
-    margin-bottom: 0.75rem;
-    background-color: rgb(139 92 246);
-    background-color: rgb(109 40 217);
-    color: rgb(255 255 255);
+    color: #fca311;
     font-weight: 700;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-    border-radius: 0.25rem;
+    border-radius: 3rem;
+    border: 2px solid #fca311;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+      color: #fec465;
+      border: 2px solid #fec465;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .Card {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+
+    .todoContainer {
+      width: 80%;
+    }
   }
 }
